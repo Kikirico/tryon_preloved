@@ -1,0 +1,2 @@
+@extends('layout')
+@section('content')<section class="form-page narrow"><span class="eyebrow">BEHIND THE COLLECTION</span><h1>Halo, <em>admin.</em></h1><p>Kelola produk dan pembayaran Rewear.</p><form method="post" action="/admin/login">@csrf<label>Email<input name="email" type="email" required autocomplete="username" value="{{ old('email') }}"></label><label>Kata sandi<input type="password" name="password" required autocomplete="current-password"></label><button class="button full">Masuk ke dashboard →</button></form></section>@endsection

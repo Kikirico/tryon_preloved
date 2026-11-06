@@ -1,0 +1,6 @@
+# FASHN source is installed separately at the commit in ai/UPSTREAM.md.
+fastapi>=0.115,<1
+uvicorn>=0.34,<1
+python-multipart>=0.0.20
+httpx>=0.28,<1
+pytest>=8,<10

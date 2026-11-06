@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#244c3b"><title>@yield('title', 'Rewear — Cerita baru, gaya kamu.')</title><link rel="stylesheet" href="{{ asset('css/shop.css') }}"><link rel="stylesheet" href="{{ asset('css/product-content.css') }}"><link rel="stylesheet" href="{{ asset('css/fashn.css') }}"></head>
+<body><div class="announcement">A little preloved. A lot to love. <span>Temukan gaya baru, tinggalkan jejak lebih kecil.</span></div>
+<header><a class="logo" href="/">rewear<span>↗</span></a><nav><a href="/#collection">Koleksi</a><a href="/ai-fitting" class="{{ request()->is('ai-fitting*') ? 'active' : '' }}">AI Fitting</a><a href="/#how">Cara belanja</a><a href="/admin">Admin ↗</a></nav><a class="nav-cta" href="/#collection">Temukan gayamu <span>→</span></a></header>
+<main>@if(session('success'))<div class="notice" role="status">{{ session('success') }}</div>@endif @if($errors->any())<div class="notice error" role="alert">@foreach($errors->all() as $error)<p>{{ $error }}</p>@endforeach</div>@endif @yield('content')</main>
+<footer><a class="logo" href="/">rewear↗</a><p>Good clothes deserve another story.</p><span>Preloved, thoughtfully chosen. © {{ date('Y') }}</span></footer>@stack('scripts')</body></html>
